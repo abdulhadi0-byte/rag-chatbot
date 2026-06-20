@@ -35,7 +35,7 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-
+//relevant_docs = retriever.invoke(question)
 st.markdown("""
 <div class="title-box">
     <h1>🤖 RAG Chatbot</h1>
@@ -66,7 +66,7 @@ if uploaded_file:
     if st.button("🔍 Get Answer"):
         if question:
             with st.spinner("🤔 Searching document..."):
-                relevant_docs = retriever.get_relevant_documents(question)
+                relevant_docs = retriever.invoke(question)
                 context = "\n\n".join([doc.page_content for doc in relevant_docs])
 
             st.markdown(f"""
