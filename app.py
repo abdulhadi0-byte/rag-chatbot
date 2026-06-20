@@ -35,7 +35,7 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-//relevant_docs = retriever.invoke(question)
+
 st.markdown("""
 <div class="title-box">
     <h1>🤖 RAG Chatbot</h1>
@@ -71,7 +71,7 @@ if uploaded_file:
 
             st.markdown(f"""
             <div class="answer-box">
-                <b>🤖 Most Relevant Answer from Document:</b><br><br>{context}
+                <b>🤖 Most Relevant Section from Document:</b><br><br>{context}
             </div>
             """, unsafe_allow_html=True)
         else:
